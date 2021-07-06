@@ -1,4 +1,4 @@
-# BROKER CONSOLE 移动端后门调试程序
+# MobileBackdoor 移动端后门调试程序
 
 ## 组件简介
 
@@ -9,21 +9,15 @@
 1. 安装
 
 ```
-npm install @broker/console
-```
-
-tip： 因为是发到 58npm 上的，如果安装失败在 .npmrc 文件中中加入：
-
-```
-@broker:registry=http://ires.58corp.com/repository/npm/
+npm install
 ```
 
 2. 使用
 
 ```
-import BrokerConsole from '@broker/console'
-const brokerConsole = new BrokerConsole({})
-brokerConsole.init()
+import mobileBackdoor from 'mobile-backdoor'
+const mobileBackdoor = new mobileBackdoor({})
+mobileBackdoor.init()
 ```
 
 ## 例子
@@ -31,7 +25,7 @@ brokerConsole.init()
 - 只使用长按唤出
 
 ```
-const brokerConsole = new BrokerConsole({
+const mobileBackdoor = new MobileBackdoor({
     element: document.getElementById('testDiv') // 触发事件的element
     mode: 'touch', // 触发模式 click X秒内快速点击  touch 长按X秒  both: 快速点击和长按
     touchActiveTime: 1000, // 长按激活时间
@@ -40,14 +34,14 @@ const brokerConsole = new BrokerConsole({
         useShadowDom: true,
     },
 })
-brokerConsole.init()
+mobileBackdoor.init()
 ```
 
 - 使用自定义方法
 
 ```
 
-const brokerConsole = new BrokerConsole({
+const mobileBackdoor = new MobileBackdoor({
     element: document.getElementById('testDiv') // 触发事件的element
     mode: 'custom', // 触发模式 click X秒内快速点击  touch 长按X秒  both: 快速点击和长按 custom 自定义，需要配套传入 customFunction ，并且在该方法中调用callback回调
     customFunction:(callback)=>{
@@ -61,7 +55,7 @@ const brokerConsole = new BrokerConsole({
         useShadowDom: true,
     },
 })
-brokerConsole.init()
+mobileBackdoor.init()
 ```
 
 ## 配置项
