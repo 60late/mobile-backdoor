@@ -1,6 +1,6 @@
 {
-  "name": "mobie-backdoor",
-  "version": "0.0.1",
+  "name": "mobile-backdoor",
+  "version": "0.0.2",
   "description": "移动端后门调试工具",
   "author": "60late <470535003@qq.com>",
   "license": "MIT",

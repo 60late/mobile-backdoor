@@ -9,7 +9,7 @@
 1. 安装
 
 ```
-npm install
+npm install mobile-backdoor
 ```
 
 2. 使用
